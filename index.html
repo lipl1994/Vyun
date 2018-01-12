@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式云盘</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
+    <!-- <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script> -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5新增的标签，引入下面代码文件即可。 -->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <!-- 同理为使IE6、7、8版本浏览器兼容css3样式，引入下面代码： -->
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="./js/my_js.js"></script>
+</head>
+<body scoll=no>
+ 
+<!-- 加载页 -->
+  <div class="shade">
+    <div class="text">
+    </div>
+          <p></p>
+    <div class="plan">
+      <div class="plan_bar">
+      </div>
+    </div>
+    <!-- 登录 -->
+    <div class="login">
+      <div class="login_main">
+        <div>
+          <span>账 号：</span><input class="user" type="text" name="" value="">
+        </div>
+        <div>
+          <span>密  码：</span><input class="passw" type="password" name="" value="">
+        </div>
+      </div>
+      <div class="login_btn"><button type="" >登录</button></div>
+    </div>
+  </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="miao-v" src="./images/log.png">
+            </a>
+            <span class="name">阿木木的云盘</span>
+            
+          </div>
+          <ul class="pull-left alert_box">
+            <li>连接服务器超时，请稍后再试</li>
+          </ul>
+          <ul class="text-right pull-right">
+              <li class="photo pull-left"><img src="./images/photo.png" width="35" alt="" class="img-circle"></li>
+              <li class="photo_down pull-left"><span class="caret"></span></li>
+              <li class="shu pull-left">|</li>
+              <li class="set pull-right"></li>
+          </ul>
+            <div class="clearfix"></div>
+        </div>
+      </nav>
+      <div class="container-fluid btn_parent">
+          <div class="container">
+              <div class="btn-group btn-grp" id="funBtn" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default download"><span></span>下载</button>
+                  <button type="button" class="btn btn-default share"><span></span>分享</button>
+                  <button type="button" data-toggle="modal" class="btn btn-default move" id="moveTo"><span></span>移动到</button>
+                  <button type="button" class="btn btn-default rname"><span></span>重命名</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal_delet" class="btn btn-default delet"><span></span>删除</button>
+                  <button type="button" class="btn btn-default addfile"><span></span>新建文件夹</button>
+                  <button type="button" class="btn btn-default refresh"><span></span>刷新</button>
+
+              </div>
+             <!--  <button type="button" class="btn btn-default pull-right btn-sort"><span text-center></span></button> -->
+            
+              <!-- Split button -->
+              <div class="btn-group pull-right btn-order">
+                <label id="sortBtn">
+                  <button type="button" class="btn btn-info">文件排序</button>
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" style="margin-left:-10px">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                </label>
+                  
+                  <ul class="dropdown-menu sortUl">
+                    <li id="sortTime"><a href="#"><span class="sortTime"></span>按时间排序</a></li>
+                    <li id="sortLetter"><a href="#"><span class="sortLetter"></span>按字母顺序</a></li>
+                    <!-- <li><a href="#"><span class="sortThumb"></span>显示缩略图</a></li> -->
+                   <!--  <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li> -->
+                  </ul>
+                </div>
+                <!-- <button type="button" class="btn btn-info pull-right btn-view"><span text-center></span></button> -->
+          </div>
+      </div>
+      <section class="container sectionWay">
+          <div class="way" >
+            <span>
+              <em id='selectAll'></em>
+            </span>
+            <ul id="way">
+             <!--  <li><em></em></li>
+              <li class="active">微云</li>
+              <li><span></span>web前端课程</li>
+              <li><span></span>js课程</li>
+              <input type="" name="" value=""> -->
+            </ul>
+          </div>
+      </section>
+<!-- 文件夹排布 -->
+      <section class="container-fluid mainBody">
+        <div class="container" id="container" >
+          <div class="row" id="file_box">
+            </div>
+            <div class="noFile">
+              <p>此处没有文件</p>
+            </div>
+          </div>
+          
+      </section>
+      <!-- 模态框 -->
+      <!-- Button trigger modal -->
+      <!-- 删除框 -->
+<div class="modal fade" tabindex="-1"  id="myModal_delet" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">你确定要删除这个文件吗</h4>
+      </div>
+      <div class="modal-body">
+        <p>已删除的文件将不复存在</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default dele_close" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary dele_sure">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+      <!-- 移动框 -->
+<div class="modal fade" tabindex="-1"  id="myModal_move" role="dialog" style="">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="moveHeader">
+        <button type="button" id="closeMove" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">请选择要储存的位置</h4>
+      </div>
+      <div class="modal-body way_list" id="moveList">
+        <!-- <h2>JS基础课程</h2> -->
+        <ul>
+          <li><span></span><em></em>js课程
+              <ul>
+                <li><span></span><em></em>选项卡原理</li>
+                <li><span></span><em></em>鼠标滚轮事件</li>
+                <li><span></span><em></em>拖拽原理
+                  <ul>
+                    <li><span></span><em></em>拖拽案例1
+                    <ul>
+                      <li>
+                        <span></span>
+                        <em></em>拖拽案例11111</li>
+                      <li>
+                        <span></span>
+                        <em></em>拖拽案例22222</li>
+                    </ul>
+                    </li>
+                    <li><span></span><em></em>拖拽案例2</li>
+                  </ul>
+                </li>
+              </ul>
+          
+          </li>
+          <li id="test"><span></span><em></em>css3课程</li>
+          <li><span></span><em></em>HTML5课程</li>
+          <li><span></span><em></em>JAVA课程</li>
+          <li><span></span><em></em>JQ插件库</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btnMoveClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" id="btnMoveSure" class="btn btn-primary">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 正在删除框 -->
+<div class="deleting">
+  <p>正在删除0/10</p>
+</div>
+<div class="modal-backdrop fade in" id="shade" style="transform:scale(0);"></div>
+</body>
+</html>
