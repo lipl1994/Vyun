@@ -20,7 +20,7 @@ window.onload=function(){
     var loadNum=document.querySelector('.shade p');
     var num=0;
     var login_btn = document.querySelector('.login_btn');
-    var str='手在键盘敲很轻，我给的思念很小,送你的白色玫瑰在纯黑的环境凋零...';
+    var str='随便找了张图片当作页面背景，色调不搭配哟...';
     var text = document.querySelector('.text');
 
 
