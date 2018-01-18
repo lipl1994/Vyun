@@ -73,10 +73,10 @@ ul,li{list-style: none;}
 /* 正在删除框 */
 .deleting{width: 20%; padding: 2% 0; border:1px solid #55addc; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); background: #fff; border-radius: 5%; z-index: 99; display: none;} 
 .deleting p{font-size: 16px; text-align: center; height: 25px; line-height: 25px;margin: 0;}
-.shade{width:100%; height:100%; background:url(../images/22.jpg) no-repeat; z-index:2; position: absolute; top:0; left: 0; display: block; overflow: hidden;}
+.shade{width:100%; height:100%; background:url(../images/22.jpg) no-repeat; background-size:cover; z-index:2; position: absolute; top:0; left: 0; display: block; overflow: hidden;}
 .plan{position: absolute;width: 100%; left: 0; bottom:15%; height: 30px; border:1px dotted #fff; display: none;} 
 .plan_bar{height: 30px; background: rgba(255, 255, 255, 0.8); width: 0;}
-.shade p{position: absolute; width: 100%; left: 0; background-size:cover; bottom: 20%; color:rgb(255, 255, 255); font-size: 16px; text-align: center;}
+.shade p{position: absolute; width: 100%; left: 0; bottom: 20%; color:rgb(255, 255, 255); font-size: 16px; text-align: center;}
 .titleName{display: inline-block; padding: 0 16px;}
 .titleName:hover,.titleName:active,.titleName.active,.titleName.active{background:rgba(210,210,210,0.5); border-radius: 5px;}
 
