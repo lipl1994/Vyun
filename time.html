@@ -2,7 +2,7 @@
  * @Author: lipl penglinli3@creditease.cn
  * @Date: 2022-08-08 17:01:22
  * @LastEditors: lipl penglinli3@creditease.cn
- * @LastEditTime: 2022-08-08 17:47:40
+ * @LastEditTime: 2022-08-08 18:11:20
  * @FilePath: /study/time.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -15,20 +15,35 @@
   <title>春节倒计时</title>
   <style>
     .content {
-      text-align: center;
-      margin-top: 200px;
-      font-size: 50px;
+      text-align: left;
+      font-size: 30px;
+      padding: 8px;
     }
     .content span {
-      font-size: 60px;
+      font-size: 40px;
       color: #f44336;
+    }
+    .qlyf img {
+      width: 100%;
+    }
+    .photo {
+      display: flex;
+      justify-content: space-between;
+    }
+    .photo img {
+      width: 48%;
     }
   </style>
 </head>
 <body>
   <div class="content">
+    <div class="photo">
+      <img src="./images/xwjpeg" alt="">
+      <img src="./images/xx.png" alt="">
+    </div>
     <p>距离春节还有 <span class="d-box"></span> 天</p>
-    <p>距离春节还有 <span class="time-box"></span> 秒</p>
+    <p><span class="time-box"></span> 秒</p>
+    <div class="qlyf"><img src="./images/qlyf.png" alt=""></div>
   </div>
 </body>
 <script>
