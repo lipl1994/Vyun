@@ -2,7 +2,7 @@
  * @Author: lipl penglinli3@creditease.cn
  * @Date: 2022-08-08 17:01:22
  * @LastEditors: lipl penglinli3@creditease.cn
- * @LastEditTime: 2022-08-10 10:06:44
+ * @LastEditTime: 2022-09-16 10:17:15
  * @FilePath: /study/time.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>春节倒计时</title>
+  <title>小明结婚倒计时</title>
   <style>
     .content {
       text-align: left;
@@ -24,7 +24,10 @@
       color: #f44336;
     }
     .qlyf img {
-      width: 100%;
+      width: 90%;
+      position: absolute;
+      bottom: 0;
+      left: 5%;
     }
     .photo {
       display: flex;
@@ -37,19 +40,15 @@
 </head>
 <body>
   <div class="content">
-    <div class="photo">
-      <img src="./images/xwjpeg" alt="">
-      <img src="./images/xx.png" alt="">
-    </div>
-    <p>距离春节还有 <span class="d-box"></span> 天</p>
+    <p>小明结婚倒计时 <span class="d-box"></span> 天</p>
     <p><span class="time-box"></span> 秒</p>
-    <div class="qlyf"><img src="./images/qlyf.png" alt=""></div>
+    <div class="qlyf"><img src="./images/xi.png" alt=""></div>
   </div>
 </body>
 <script>
   const dayBox = document.querySelector('.d-box')
   const timeBox = document.querySelector('.time-box')
-  const targTime = new Date(1674316800000)
+  const targTime = new Date(1664726400000)
   function timeFun () {
     const nowTime = Date.now()
     const time = Math.floor((targTime - nowTime)/1000)
